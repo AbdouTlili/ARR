@@ -44,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#eee"
+            android:textColor="#000"
             android:hint="Your password here ;)"
             android:inputType="textPassword"
             android:padding="20dp" />
