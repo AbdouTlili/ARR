@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class splash_screen extends AppCompatActivity {
 
     @Override
@@ -13,7 +15,12 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-        final int dly = 4000;
+        final int dly = 7000;
+
+        // setting animation speed
+
+        LottieAnimationView animate = (LottieAnimationView) findViewById(R.id.animation);
+        animate.setSpeed((float) 1.7);
 
         // creating a handler to make some delay off 'dly' seconds
 
