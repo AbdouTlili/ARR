@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#222"
+        android:text="Sign Up"
+        android:textSize="72sp"
+        android:fontFamily="@font/apu"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupmail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:hint="Email" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupseudo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:hint="Pseudo" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signuppass"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:hint="Password" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signuppass1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="35dp"
+        android:hint="Confirm Password" />
+
+    <Button
+        android:id="@+id/signupBut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#109F8D"
+        android:text="login"
+        android:textColor="#eee" />
+
+</LinearLayout>
