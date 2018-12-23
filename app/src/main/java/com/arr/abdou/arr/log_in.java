@@ -26,10 +26,12 @@ public class log_in extends AppCompatActivity {
      EditText userMail;
      EditText userPasswd;
      TextView signup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+
          signup=(TextView) findViewById(R.id.signup);
          userMail = (EditText) findViewById(R.id.userMail);
          userPasswd = (EditText) findViewById(R.id.userPasswd);
@@ -71,10 +73,25 @@ public class log_in extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(log_in.this,SignUp.class));
+
             }
         });
     }
 
+    void loginUserFireBase(String mail,String passwd,FirebaseAuth fireLog){
+        fireLog.signInWithEmailAndPassword(mail,passwd)
+                .addOnCompleteListener((Activity) getApplicationContext(), new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Intent intent = new Intent(getApplicationContext(),splash_screen.class);
+                            startActivity(intent);
+                        }else {
+
+                        }
+                    }
+                })
+    }
 
 
 
